@@ -1,0 +1,76 @@
+#BEGIN WordPress	
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule. /index.php [L]
+#END WordPress
+
+
+
+Options +FollowSymlinks
+
+#No hotlink
+
+RewriteEngine On
+
+RewriteCond %{HTTP_REFERER}!^$
+
+RewriteCond %{HTTP_REFERER}!^http://(www.)?domain.com/[nc]
+
+RewriteRule .*.(gif|jpg|png)$ http://domain.com/images/nohotlink.gif[nc]
+
+
+allow from all
+
+deny from 192.168.1.123
+
+deny from 192.168
+
+# Bảo vệ file dùng .htaccess
+
+<files .htaccess="">
+
+order allow,deny
+
+deny from all
+
+#Đặt Pass cho thư mục
+
+resides
+
+AuthType basic
+
+AuthName "Thư mục này được bảo vệ"
+
+AuthGroupFile /dev/null
+
+Require valid-user
+
+# Đặt Pass cho file
+
+<file secure.php="">
+
+AuthType Basic
+
+AuthName "Prompt"
+
+AuthUserFile /home/path/.htpasswd
+
+Require vail-user
+
+# Bảo mật file wpconfig.php
+
+<file wp-config.php>
+
+order allow,deny
+
+demy from all
+
+# Giới hạn đến 10mb
+
+limitRequestBody 10240000
+
+</files>
