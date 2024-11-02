@@ -131,32 +131,31 @@ body {
 
 
 
-.header {
-    border: 1px solid red;
+
+.frame-menu {
     position: fixed;
     top: 0px;
-    background-color: #fff;
+    background-color: #333; 
     height: 77px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-}
-.logo{
-    width: 100%;
+    display: flex; 
+    align-items: center; 
+    padding: 0 10px; 
+  }
+  
+  .container-logo { 
+    position: absolute; /* Sử dụng position: absolute */
+    left: 100px; /* Cách lề trái 100px */
+    margin-right: 50px; 
+  }
+  
+  .container-menu { 
+    width: 100%; 
     display: flex;
     justify-content: center;
     flex-shrink: 1;
-}
+  }
 
-
-
-.menu {
-
-    height: 50px;
-    width: 100%;
-    background: #00e6ac;
-}
 
 ul.list_menu {
     padding: 0;
@@ -179,7 +178,7 @@ ul.list_menu li:hover {
 
 ul.list_menu li a {
     text-decoration: none;
-    color: #3333ff;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -191,11 +190,12 @@ ul.list_menu li a {
 
     height: auto ;
     width: 100%;
+    padding-top: 100px
 }
 
 .sidebar {
 
-    height: 390px;
+    height: auto;
     width: 20%;
     margin-top: 5px;
     margin-left: 5px;
@@ -222,7 +222,7 @@ ul.list_sidebar li:hover {
 
 ul.list_sidebar li a {
     text-decoration: none;
-    color: #3333ff;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -295,8 +295,8 @@ a.product_link {
 }
 
 .footer {
-
+    margin: 0 auto;
     height: 150px ;
-    width: 100%;
-    background: #00cc99;
+    width: 2000px;
+    background: #333;
 }

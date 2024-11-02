@@ -58,6 +58,7 @@ if (isset($_POST['register'])) {
             align-items: center;
             width: 100%;
             padding: 20px;
+            margin-bottom: 50px;
         }
 
         .register-box {
@@ -65,7 +66,7 @@ if (isset($_POST['register'])) {
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
+            max-width: 500px;
             width: 100%;
             text-align: center;
         }

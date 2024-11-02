@@ -10,16 +10,17 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <?php
-        include("admincp/config/connect.php");
-        include("pages/header.php");
-        include("pages/menu.php");
-        include("pages/main.php");
-        include("pages/footer.php");
-        ?>
+<?php
+include("admincp/config/connect.php");
+include("pages/menu.php"); // Di chuyển menu.php lên đây
+?>
 
-    </div>
+<div class="wrapper">
+    <?php
+    include("pages/main.php");
+    include("pages/footer.php");
+    ?>
+</div>
 
 
 

@@ -1,28 +1,90 @@
+/* Import font từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4; 
+  color: #333;
+}
+
 .title_admin {
-    text-align: center;
-    font-size: 40px;
-    color: blue;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0;
 }
 
 .wrapper {
-    border: 1px solid #000;
-    height: auto ;
-    width: 90%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
-ul.admincp_list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.admincp_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around; 
 }
 
-ul.admincp_list li {
-   float: left;
-   margin: 5px;
+.admincp_list li a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
+.admincp_list li a:hover {
+  background-color: #555;
 }
 
 .clear {
-    clear: both;
+  clear: both;
+}
+
+.main {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.main p {
+  font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+/* CSS cho nút đăng xuất */
+.wrapper > p { 
+  text-align: right; /* Căn phải văn bản trong thẻ p */
+  margin-bottom: 20px; /* Thêm khoảng cách với phần tử bên dưới */
+}
+
+.wrapper > p > a {
+  display: inline-block; /* Cho phép áp dụng padding và margin */
+  padding: 5px 10px;
+  background-color: #dc3545; /* Màu đỏ */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
