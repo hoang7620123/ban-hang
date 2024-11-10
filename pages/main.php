@@ -22,6 +22,14 @@
             include("main/giohang.php");
         } elseif ($tam == 'dangky') {
             include("main/dangky.php");
+        } elseif ($tam == 'dangnhap') {
+            include("main/dangnhap.php");
+        } elseif ($tam == 'thanhtoan') {
+            include("main/thanhtoan.php");
+        } elseif ($tam == 'camon') {
+            include("main/camon.php");
+        } elseif ($tam == 'timkiem') {
+            include("main/timkiem.php");
         } else {
             include("main/index.php");
         }

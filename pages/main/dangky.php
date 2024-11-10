@@ -6,6 +6,13 @@ if (isset($_POST['register'])) {
     $diachi = $_POST['address'];
     $sdt = $_POST['phone'];
     $sql_dangky = mysqli_query($mysqli, "INSERT INTO tbl_dangky(tenkhachhang,matkhau,email,diachi,dienthoai) VALUE('" . $tenkhachhang . "','" . $matkhau . "','" . $email . "','" . $diachi . "','" . $sdt . "')");
+    if ($sql_dangky) {
+        $_SESSION['dangky'] = $tenkhachhang;
+        $_SESSION['email'] = $email;
+        $_SESSION['id_khachhang'] = mysqli_insert_id($mysqli);
+
+        header('Location:index.php?quanly=giohang');
+    }
     // Kiểm tra reCAPTCHA
     $captcha = $_POST['g-recaptcha-response'];
     $secretKey = "6Lezq2wqAAAAAP7ARMFS5Ny6OrCta4sT7v0GOplD"; // Secret Key từ Google reCAPTCHA
@@ -34,7 +41,7 @@ if (isset($_POST['register'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký thành viên</title>
+    <title>Đăng ký</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         * {
@@ -127,10 +134,10 @@ if (isset($_POST['register'])) {
 <body>
     <div class="register-container">
         <div class="register-box">
-            <h2>Đăng Ký Thành Viên</h2>
+            <h2>Đăng Ký</h2>
             <form action="" method="POST">
                 <div class="input-group">
-                    <label for="username">Tên Đăng Nhập</label>
+                    <label for="username">Tên Khách Hàng</label>
                     <input type="text" name="username">
                 </div>
                 <div class="input-group">
@@ -153,6 +160,7 @@ if (isset($_POST['register'])) {
                 <div class="g-recaptcha" data-sitekey="6Lezq2wqAAAAAHGlOECVzocBRFPuKBggrpVuS1qj"></div>
 
                 <button type="submit" name="register" class="register-button">Đăng Ký</button>
+                <p><a href="index.php?quanly=dangnhap">Đăng nhập nếu có tài khoản</a></p>
             </form>
         </div>
     </div>
