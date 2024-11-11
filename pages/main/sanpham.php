@@ -1,4 +1,6 @@
-<p>chi tiết sản phẩm</p>
+<div class="cap-chitiet">
+<p id="cap">chi tiết sản phẩm</p>
+</div>
 <?php
 $sql_chitiet = "SELECT * FROM tbl_sanpham,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc AND tbl_sanpham.id_sanpham='$_GET[id]' LIMIT 1";
 $query_chitiet = mysqli_query($mysqli, $sql_chitiet);
@@ -9,7 +11,8 @@ while ($row_chitiet = mysqli_fetch_array($query_chitiet)) {
             <img width="50%" src="admincp/modules/quanlysp/uploads/<?php echo $row_chitiet['hinhanh'] ?>">
         </div>
         <form method="POST" action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['id_sanpham'] ?> ">
-            <div class="chitiet_sanpham">
+        <div class="container-chitiet">
+        <div class="chitiet_sanpham">
                 <h3 style="text-align:left"> <?php echo $row_chitiet['tensanpham'] ?></h3>
                 <p> <?php echo number_format($row_chitiet['giasp']) . 'VND' ?></p>
 
@@ -33,17 +36,17 @@ while ($row_chitiet = mysqli_fetch_array($query_chitiet)) {
 
                 <!-- Phần chọn số lượng -->
                 <div class="quantity_selector">
-                    <label>Số lượng</label>
-                    <button type="button" onclick="decrementQuantity()">-</button>
+                    <label>Số lượng:</label>
+                    <button type="button" id="soluong-btn" onclick="decrementQuantity()">-</button>
                     <input type="text" id="quantity" value="1" readonly>
-                    <button type="button" onclick="incrementQuantity()">+</button>
+                    <button type="button" id="soluong-btn" onclick="incrementQuantity()">+</button>
                 </div>
 
                 <!-- Nút thêm vào giỏ hàng và mua ngay -->
                 <div class="action_buttons">
                     <button class="add_to_cart_button" name="themgiohang" type="submit">Thêm vào giỏ hàng</button>
-                    <button class="buy_now_button">Mua ngay</button>
                 </div>
+            </div>
             </div>
         </form>
 

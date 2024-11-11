@@ -2,7 +2,6 @@
     <?php
     if (isset($_SESSION['dangky'])) {
         echo $_SESSION['dangky'];
-        echo $_SESSION['id_khachhang'];
     }
     ?>
 </p>

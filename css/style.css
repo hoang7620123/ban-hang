@@ -26,14 +26,37 @@ body {
     width: 40%;
     margin-left: 100px;
 }
+.container-chitiet {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px;
 
+}
 .chitiet_sanpham {
     float: left;
     width: 49%;
     margin: 10px;
     text-align: left;
+
 }
 
+.cap-chitiet {
+    background-color: #fff;
+    height: 30px;
+    width: 300px;
+
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cap {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
 .voucher {
     margin: 15px 0;
 }
@@ -97,11 +120,7 @@ body {
     border: none;
 }
 
-.action_buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
+
 
 .add_to_cart_button, .buy_now_button {
     padding: 15px;
@@ -113,7 +132,11 @@ body {
 }
 
 .add_to_cart_button {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
     background-color: #f8f8f8;
+    border: 1px solid black;
 }
 
 .add_to_cart_button:hover {
@@ -140,22 +163,97 @@ body {
     width: 100%;
     display: flex; 
     align-items: center; 
-    padding: 0 10px; 
-  }
-  
-  .container-logo { 
-    position: absolute; /* Sử dụng position: absolute */
-    left: 100px; /* Cách lề trái 100px */
-    margin-right: 50px; 
-  }
-  
-  .container-menu { 
-    width: 100%; 
-    display: flex;
-    justify-content: center;
-    flex-shrink: 1;
-  }
+    padding: 0 10px;
+    justify-content: space-between; /* Chia đều khoảng cách giữa các phần tử */
+}
 
+.container-logo, .container-menu, .right-menu {
+    flex: 1; /* Chia đều không gian cho 3 phần */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa nội dung bên trong */
+}
+.logo {
+    margin: 0 auto;
+}
+
+.container-logo {
+    justify-content: flex-start; /* Căn trái */
+}
+
+.right-menu {
+    display: flex;
+    justify-content: flex-end; /* Căn phải */
+}
+
+.right-menu .left-part {
+    flex: 7;
+    display: flex;
+    align-items: center;
+}
+
+.right-menu .right-part {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Căn phải */
+}
+
+
+/*css cho tìm kiếm*/
+.search-form {
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 30px;
+}
+.search-form .search-input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 0; 
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+}
+.search-form:focus-within .search-input {
+    width: 250px;
+    padding: 17px 0px 17px 15px; /* Tăng độ cao lên 10px */
+}
+.search-form .search-icon {
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 17.5px; /* Tăng độ cao lên 10px */
+    border-radius: 50%;
+    font-size: 15px;
+}
+/*css nút đang nhập và đăng ký*/
+.btn-logout, .btn-register {
+    width: 130px;
+    height: 50px;
+    background-color: #fff; 
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    justify-content: flex-end; /* Căn phải */
+    margin-right: 60px; 
+}
+
+.btn-logout:hover, .btn-register:hover {
+    border: 1px solid black;
+    background-color: #ddd;
+    color: black;
+}
+
+.btn {
+    /* Additional styles for the btn class */
+}
 
 ul.list_menu {
     padding: 0;
@@ -299,4 +397,13 @@ a.product_link {
     height: 150px ;
     width: 2000px;
     background: #333;
+}
+#soluong-btn {
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
 }

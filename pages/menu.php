@@ -28,23 +28,33 @@ if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
             <li><a href="index.php?quanly=tintuc">Tin tức</a></li>
             <li><a href="index.php?quanly=lienhe">Liên hệ</a></li>
             <li><a href="index.php?quanly=giohang">Giỏ hàng</a></li>
+        </ul>
+        <div class="right-menu">
+            <div class="left-part">
+            <form action="index.php?quanly=timkiem" method="POST" class="search-form">
+                    <div class="input-holder">
+                        <input type="text" class="search-input" placeholder="Type to search" name="tukhoa" />
+                        <button type="submit" class="search-icon" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    
+                    <span class="close" onclick="searchToggle(this, event);"></span>
+                </div>
+            </form>
+            </div>
+            <div class="right-part">
             <?php
             if (isset($_SESSION['dangky'])) {
             ?>
-                <li><a href="index.php?dangxuat=1">Đăng xuất</a></li>
+                <button onclick="window.location.href='index.php?dangxuat=1'" class="btn-logout btn">Đăng xuất</button>
             <?php
             } else {
             ?>
-                <li><a href="index.php?quanly=dangky">Đăng kí</a></li>
+                <button onclick="window.location.href='index.php?quanly=dangky'" class="btn-register btn">Đăng kí</button>
             <?php
             }
             ?>
-        </ul>
-        <p>
-        <form action="index.php?quanly=timkiem" method="POST">
-            <input type="text" placeholder="Tìm kiếm sản phẩm..." name="tukhoa">
-            <input type="submit" name="timkiem" value="Tìm kiếm">
-        </form>
-        </p>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
