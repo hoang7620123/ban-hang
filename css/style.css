@@ -407,3 +407,38 @@ a.product_link {
     background: rgb(255, 255, 255);
     cursor: pointer;
 }
+
+#giohang {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+#giohang th, #giohang td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#giohang th {
+    background-color: #f2f2f2;
+    color: black;
+}
+#giohang tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+#giohang img {
+    width: 150px;
+}
+#giohang button {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+#thongtin-02 p {
+    margin: 10px 0;
+}
+#thongtin-02 a {
+    text-decoration: none;
+    color: blue;
+}
+#del-all {
+    background-color: #817c7c;
+    color: white;
+}

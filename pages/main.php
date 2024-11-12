@@ -20,6 +20,8 @@
             include("main/sanpham.php");
         } elseif ($tam == 'giohang') {
             include("main/giohang.php");
+        } elseif ($tam == 'kiemtra') {
+            include("main/kiemtra.php");
         } elseif ($tam == 'dangky') {
             include("main/dangky.php");
         } elseif ($tam == 'dangnhap') {
