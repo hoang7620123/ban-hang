@@ -57,17 +57,7 @@ body {
     font-weight: bold;
     text-align: center;
 }
-.voucher {
-    margin: 15px 0;
-}
 
-.voucher_button {
-    background: #fff3f3;
-    border: 1px dashed red;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
 
 .color_selector, .size_selector, .quantity_selector {
     margin-top: 15px;
@@ -369,7 +359,7 @@ a.product_link {
 }
 
 .product_card_image img {
-    width: 500px;
+    width: 260px;
     height: auto;
 }
 
