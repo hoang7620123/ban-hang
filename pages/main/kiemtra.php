@@ -1,7 +1,9 @@
 <?php
+
 $cart = $_SESSION['cart'] ?? [];
 
 $user = $_SESSION['user'] ?? null;
+
 
 // Tính tổng tiền
 $total = 0;

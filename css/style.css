@@ -57,7 +57,17 @@ body {
     font-weight: bold;
     text-align: center;
 }
+.voucher {
+    margin: 15px 0;
+}
 
+.voucher_button {
+    background: #fff3f3;
+    border: 1px dashed red;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .color_selector, .size_selector, .quantity_selector {
     margin-top: 15px;
@@ -195,6 +205,8 @@ body {
     margin: 0 auto;
     background: #fff;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
 }
 .search-form .search-input {
     border: none;
@@ -203,23 +215,24 @@ body {
     width: 0; 
     padding: 0;
     transition: all 0.25s ease-in-out;
+    font-size: 1rem; /* Adjust font size relative to the root element */
 }
 .search-form:focus-within .search-input {
-    width: 250px;
-    padding: 17px 0px 17px 15px; /* Tăng độ cao lên 10px */
+    width: 15rem; /* Adjust width relative to the root element */
+    padding: 1rem 0 1rem 1rem; /* Adjust padding relative to the root element */
 }
 .search-form .search-icon {
     background-color: #fff;
     cursor: pointer;
     border: none;
-    padding: 17.5px; /* Tăng độ cao lên 10px */
+    padding: 1rem; /* Adjust padding relative to the root element */
     border-radius: 50%;
-    font-size: 15px;
+    font-size: 1rem; /* Adjust font size relative to the root element */
 }
 /*css nút đang nhập và đăng ký*/
 .btn-logout, .btn-register {
-    width: 130px;
-    height: 50px;
+    width: auto;
+    height: auto;
     background-color: #fff; 
     border: none;
     color: black;
@@ -359,7 +372,7 @@ a.product_link {
 }
 
 .product_card_image img {
-    width: 260px;
+    width: 500px;
     height: auto;
 }
 
