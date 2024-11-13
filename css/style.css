@@ -294,38 +294,7 @@ ul.list_menu li a {
     padding-top: 100px
 }
 
-.sidebar {
 
-    height: auto;
-    width: 20%;
-    margin-top: 5px;
-    margin-left: 5px;
-    float: left;
-    background-color: #fff;
-}
-
-ul.list_sidebar {
-    padding: 0;
-    list-style: none;
-    margin: 0;
-    line-height: 30px;
-}
-
-ul.list_sidebar li {
-    margin: 5px;
-    padding: 5px;
-    background-color: #f1f1f1;
-}
-
-ul.list_sidebar li:hover {
-    background: cadetblue;
-}
-
-ul.list_sidebar li a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-}
 
 .maincontent {
 
@@ -372,7 +341,7 @@ a.product_link {
 }
 
 .product_card_image img {
-    width: 500px;
+    width: 260px;
     height: auto;
 }
 
