@@ -2,14 +2,14 @@
 if (isset($_POST['dangnhap'])) {
     $email = $_POST['email'];
     $matkhau = md5($_POST['password']);
-    $sql = "SELECT * FROM tbl_dangky WHERE email = '" . $email . "'AND matkhau = '" . $matkhau . "' LIMIT 1";
+    $sql = "SELECT * FROM tbl_dangky WHERE email = '{$email}' AND matkhau = '{$matkhau}' LIMIT 1";
     $row = mysqli_query($mysqli, $sql);
     $count = mysqli_num_rows($row);
     if ($count > 0) {
         $row_data = mysqli_fetch_array($row);
         $_SESSION['dangky'] = $row_data['tenkhachhang'];
         $_SESSION['email'] = $row_data['email'];
-        header('Location:index.php?quanly=giohang');
+        header(header: 'Location:index.php?quanly=giohang');
     } else {
         echo 'Email hoặc Mật khẩu không đúng!';
     }
