@@ -54,7 +54,19 @@
             height: 50px;
         }
         #dathang-btn:hover  {
-            background-color: #ddd;
+            background-color: #fef6c7;
+            color: black;
+        }
+        #dkdathang-btn {
+            background-color: #1ebe33;
+            color: white;
+            border-radius: 15px;
+            margin: 0 auto;
+            width: 300px;
+            height: 50px;
+        }
+        #dkdathang-btn:hover  {
+            background-color: #fef6c7;
             color: black;
         }
 
@@ -124,7 +136,7 @@
                 <?php
                 } else {
                 ?>
-                    <p><a href="index.php?quanly=dangky">Đăng ký đặt hàng</a></p> 
+                    <p><a href="index.php?quanly=dangky"><button id="dkdathang-btn" type="button">Đăng ký đặt hàng</button></a></p>
                 <?php
                 }
                 ?>

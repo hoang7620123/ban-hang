@@ -14,6 +14,8 @@
             include("main/danhmuc.php");
         } elseif ($tam == 'tintuc') {
             include("main/tintuc.php");
+        } elseif ($tam == 'home') {
+            include("main/home.php");
         } elseif ($tam == 'lienhe') {
             include("main/lienhe.php");
         } elseif ($tam == 'sanpham') {

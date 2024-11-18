@@ -57,7 +57,17 @@ body {
     font-weight: bold;
     text-align: center;
 }
+.voucher {
+    margin: 15px 0;
+}
 
+.voucher_button {
+    background: #fff3f3;
+    border: 1px dashed red;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .color_selector, .size_selector, .quantity_selector {
     margin-top: 15px;
@@ -195,6 +205,8 @@ body {
     margin: 0 auto;
     background: #fff;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
 }
 .search-form .search-input {
     border: none;
@@ -203,23 +215,32 @@ body {
     width: 0; 
     padding: 0;
     transition: all 0.25s ease-in-out;
+    font-size: 1rem; /* Adjust font size relative to the root element */
 }
 .search-form:focus-within .search-input {
-    width: 250px;
-    padding: 17px 0px 17px 15px; /* Tăng độ cao lên 10px */
+    width: 15rem; /* Adjust width relative to the root element */
+    padding: 1rem 0 1rem 1rem; /* Adjust padding relative to the root element */
 }
 .search-form .search-icon {
     background-color: #fff;
     cursor: pointer;
     border: none;
-    padding: 17.5px; /* Tăng độ cao lên 10px */
+    padding: 1rem; /* Adjust padding relative to the root element */
     border-radius: 50%;
-    font-size: 15px;
+    font-size: 1rem; /* Adjust font size relative to the root element */
 }
+.giohang-btn{
+    background-color: #333;
+    cursor: pointer;
+    border: none;
+    padding: 1rem; /* Adjust padding relative to the root element */
+    margin-right: 10px;
+}
+
 /*css nút đang nhập và đăng ký*/
 .btn-logout, .btn-register {
-    width: 130px;
-    height: 50px;
+    width: auto;
+    height: auto;
     background-color: #fff; 
     border: none;
     color: black;
@@ -236,6 +257,8 @@ body {
 }
 
 .btn-logout:hover, .btn-register:hover {
+    width: auto;
+    height: auto;
     border: 1px solid black;
     background-color: #ddd;
     color: black;
@@ -281,38 +304,7 @@ ul.list_menu li a {
     padding-top: 100px
 }
 
-.sidebar {
 
-    height: auto;
-    width: 20%;
-    margin-top: 5px;
-    margin-left: 5px;
-    float: left;
-    background-color: #fff;
-}
-
-ul.list_sidebar {
-    padding: 0;
-    list-style: none;
-    margin: 0;
-    line-height: 30px;
-}
-
-ul.list_sidebar li {
-    margin: 5px;
-    padding: 5px;
-    background-color: #f1f1f1;
-}
-
-ul.list_sidebar li:hover {
-    background: cadetblue;
-}
-
-ul.list_sidebar li a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-}
 
 .maincontent {
 

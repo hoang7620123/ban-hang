@@ -15,19 +15,21 @@ if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
         <div class="container-logo">
             <img src="../pages/hình/Va_no_la.png" alt="Logo" class="logo" usemap="#logo" width="200px" height="50px">
             <map name="logo">
-                <area shape="default" coords="" href="index.php" alt="Logo">
+                <area shape="default" coords="" href="index.php?quanly=home" alt="Logo">
             </map>
         </div>
         <ul class="list_menu">
-            <li><a href="index.php">Trang chủ</a></li>
+            
+            <li><a href="index.php?quanly=home">Trang chủ</a></li>
+            <li><a href="index.php?quanly=index.php">Danh mục</a></li>
+
             <?php while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) { ?>
                 <!-- <li><a
                 href="index.php?quanly=danhmucsanpham&id=<?php echo $row_danhmuc['id_danhmuc'] ?>"><?php echo $row_danhmuc['tendanhmuc'] ?></a>
         </li> -->
             <?php } ?>
-            <li><a href="index.php?quanly=tintuc">Tin tức</a></li>
+            <li><a href="index.php?quanly=index.php">Sản phẩm</a></li>
             <li><a href="index.php?quanly=lienhe">Liên hệ</a></li>
-            <li><a href="index.php?quanly=giohang">Giỏ hàng</a></li>
         </ul>
         <div class="right-menu">
             <div class="left-part">
@@ -41,6 +43,7 @@ if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
             </form>
             </div>
             <div class="right-part">
+            <button type="submit" class="giohang-btn" onclick="window.location.href='index.php?quanly=giohang'"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></button>
             <?php
             if (isset($_SESSION['dangky'])) {
             ?>
