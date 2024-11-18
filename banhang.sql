@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 01, 2024 lúc 09:17 AM
+-- Thời gian đã tạo: Th10 18, 2024 lúc 08:41 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -42,7 +42,61 @@ INSERT INTO `tbl_admin` (`id_admin`, `username`, `password`, `admin_status`) VAL
 (9, '', 'd41d8cd98f00b204e9800998ecf8427e', 0),
 (10, '', 'd41d8cd98f00b204e9800998ecf8427e', 0),
 (11, 'admin2', 'c4ca4238a0b923820dcc509a6f75849b', 0),
-(12, 'admin2', 'c4ca4238a0b923820dcc509a6f75849b', 0);
+(12, 'admin2', 'c4ca4238a0b923820dcc509a6f75849b', 0),
+(13, 'admin3', 'c4ca4238a0b923820dcc509a6f75849b', 0),
+(14, 'admin3', 'c4ca4238a0b923820dcc509a6f75849b', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_cart`
+--
+
+CREATE TABLE `tbl_cart` (
+  `id_cart` int(11) NOT NULL,
+  `id_khachhang` int(11) NOT NULL,
+  `code_cart` varchar(10) NOT NULL,
+  `cart_status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_cart`
+--
+
+INSERT INTO `tbl_cart` (`id_cart`, `id_khachhang`, `code_cart`, `cart_status`) VALUES
+(1, 26, '8674', 1),
+(2, 26, '7700', 1),
+(3, 26, '3868', 1),
+(4, 28, '2633', 1),
+(5, 0, '5931', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_cart_details`
+--
+
+CREATE TABLE `tbl_cart_details` (
+  `id_cart_details` int(11) NOT NULL,
+  `code_cart` varchar(10) NOT NULL,
+  `id_sanpham` int(11) NOT NULL,
+  `soluong` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_cart_details`
+--
+
+INSERT INTO `tbl_cart_details` (`id_cart_details`, `code_cart`, `id_sanpham`, `soluong`) VALUES
+(1, '8674', 38, 1),
+(2, '8674', 37, 1),
+(3, '8674', 36, 1),
+(4, '7700', 38, 1),
+(5, '7700', 37, 1),
+(6, '7700', 36, 1),
+(7, '3868', 37, 1),
+(8, '2633', 38, 1),
+(9, '5931', 37, 1);
 
 -- --------------------------------------------------------
 
@@ -64,10 +118,12 @@ CREATE TABLE `tbl_dangky` (
 --
 
 INSERT INTO `tbl_dangky` (`id_dangky`, `tenkhachhang`, `matkhau`, `email`, `diachi`, `dienthoai`) VALUES
-(13, 'hoang', '202cb962ac59075b964b07152d234b70', 'hoang7620345@gmail.com', '169', '0908268859'),
-(14, 'hoang', '202cb962ac59075b964b07152d234b70', 'hoang7620345@gmail.com', '169', '0908268859'),
-(15, '', 'd41d8cd98f00b204e9800998ecf8427e', '', '', ''),
-(16, '', 'd41d8cd98f00b204e9800998ecf8427e', '', '', '');
+(24, 'Minh Hoàng', '202cb962ac59075b964b07152d234b70', 'hoang7620345@gmail.com', '169', '0908268859'),
+(25, 'Minh Hoàng', '202cb962ac59075b964b07152d234b70', 'hoang7620345@gmail.com', '169', '0908268859'),
+(26, 'Hoàng', '202cb962ac59075b964b07152d234b70', 'hoang7620456@gmail.com', '169', '0908268859'),
+(27, 'Hoàng', '202cb962ac59075b964b07152d234b70', 'hoang7620456@gmail.com', '169', '0908268859'),
+(28, 'Hoàng', '202cb962ac59075b964b07152d234b70', 'hoang7620345@gmail.com', '169', '0908268859'),
+(29, 'Hoàng', '202cb962ac59075b964b07152d234b70', 'hoang7620345@gmail.com', '169', '0908268859');
 
 -- --------------------------------------------------------
 
@@ -91,6 +147,24 @@ INSERT INTO `tbl_danhmuc` (`id_danhmuc`, `tendanhmuc`, `thutu`) VALUES
 (12, 'Jacket', 3),
 (13, 'Pant', 4),
 (14, 'Short', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_lienhe`
+--
+
+CREATE TABLE `tbl_lienhe` (
+  `id` int(11) NOT NULL,
+  `thongtinlienhe` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_lienhe`
+--
+
+INSERT INTO `tbl_lienhe` (`id`, `thongtinlienhe`) VALUES
+(1, '<p>Hotline: <strong>0937744254</strong></p>\r\n\r\n<p>IG: <strong>minkwafng</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -134,6 +208,18 @@ ALTER TABLE `tbl_admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
+-- Chỉ mục cho bảng `tbl_cart`
+--
+ALTER TABLE `tbl_cart`
+  ADD PRIMARY KEY (`id_cart`);
+
+--
+-- Chỉ mục cho bảng `tbl_cart_details`
+--
+ALTER TABLE `tbl_cart_details`
+  ADD PRIMARY KEY (`id_cart_details`);
+
+--
 -- Chỉ mục cho bảng `tbl_dangky`
 --
 ALTER TABLE `tbl_dangky`
@@ -144,6 +230,12 @@ ALTER TABLE `tbl_dangky`
 --
 ALTER TABLE `tbl_danhmuc`
   ADD PRIMARY KEY (`id_danhmuc`);
+
+--
+-- Chỉ mục cho bảng `tbl_lienhe`
+--
+ALTER TABLE `tbl_lienhe`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `tbl_sanpham`
@@ -159,19 +251,37 @@ ALTER TABLE `tbl_sanpham`
 -- AUTO_INCREMENT cho bảng `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_cart`
+--
+ALTER TABLE `tbl_cart`
+  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_cart_details`
+--
+ALTER TABLE `tbl_cart_details`
+  MODIFY `id_cart_details` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_dangky`
 --
 ALTER TABLE `tbl_dangky`
-  MODIFY `id_dangky` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_dangky` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_danhmuc`
 --
 ALTER TABLE `tbl_danhmuc`
   MODIFY `id_danhmuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_lienhe`
+--
+ALTER TABLE `tbl_lienhe`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_sanpham`
