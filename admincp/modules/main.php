@@ -18,6 +18,8 @@
         include("modules/quanlysp/lietke.php");
     } elseif ($tam == 'quanlysp' && $query == 'sua') {
         include("modules/quanlysp/sua.php");
+    } elseif ($tam == 'quanlyweb' && $query == 'capnhat') {
+        include("modules/thongtinweb/quanly.php");
     } else {
         include("modules/dashboard.php");
     }
