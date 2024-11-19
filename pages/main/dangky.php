@@ -44,90 +44,90 @@ if (isset($_POST['register'])) {
     <title>Đăng ký</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f2f5;
-        }
+    body {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f2f5;
+    }
 
-        .register-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-            margin-bottom: 50px;
-        }
+    .register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
 
-        .register-box {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-        }
+    .register-box {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
 
-        .register-box h2 {
-            color: #333333;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
+    .register-box h2 {
+        color: #333333;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
 
-        .input-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
+    .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
 
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: #333333;
-        }
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #333333;
+    }
 
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: #f8f9fa;
-            transition: border-color 0.3s;
-        }
+    .input-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #f8f9fa;
+        transition: border-color 0.3s;
+    }
 
-        .input-group input:focus {
-            border-color: #3333ff;
-            outline: none;
-        }
+    .input-group input:focus {
+        border-color: #3333ff;
+        outline: none;
+    }
 
-        .register-button {
-            width: 100%;
-            padding: 12px;
-            background-color: #3333ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 10px;
-        }
+    .register-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #3333ff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+    }
 
-        .register-button:hover {
-            background-color: #2626b2;
-        }
+    .register-button:hover {
+        background-color: #2626b2;
+    }
     </style>
 </head>
 

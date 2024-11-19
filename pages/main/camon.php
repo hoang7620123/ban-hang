@@ -1,1 +1,1 @@
-<p>Cảm ơn bạn đã liên hệ. Chúng tôi sẽ sớm phản hồi</p>
+<p>Cảm ơn</p>
